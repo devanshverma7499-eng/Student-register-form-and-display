@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink">
+    <div class="container">
+        <div class="Form-section">
+            <fieldset><b>
+                <legend><h1>Student Registration Form</h1></legend>
+                <form id="student-Form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div><br/>
+                    <div class="form-group">
+                        <label for="rollNumber">Roll Number:</label>
+                        <input type="text" id="rollNumber" name="rollNumber" required>
+                    </div><br/>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div><br/>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div><br/>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div><br/>
+                    <button type="submit" id="submit">Submit</button></b>
+
+                    
+            </form>
+            </fieldset>
+            <br/><h3><b><u><div id="output"> DISPLAY INFORMATION HERE</u></b></h3></div>
+    </div>
+    <script>
+        document.getElementById("student-Form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let name = document.getElementById("name").value;
+            let rollNumber = document.getElementById("rollNumber").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let address = document.getElementById("address").value;
+            document.getElementById("output").innerHTML = `<h2>Student Details:</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Roll Number:</strong> ${rollNumber}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Address:</strong> ${address}</p>`;
+          
+           
+});
+    </script>
+</body>
+</html>
